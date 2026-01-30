@@ -1,124 +1,68 @@
-# NIVEX Skills 共享库 / Thư viện Skills NIVEX
-
-公司团队共用的 Claude Code Skills，按岗位分类，按需安装。
-Thư viện Claude Code Skills dùng chung cho toàn đội, phân loại theo vị trí, cài đặt theo nhu cầu.
+# NIVEX Skills / Thư viện Skills NIVEX
 
 ---
 
-## 🚀 安装 / Cài đặt
+## 🚀 怎么安装 / Cách cài đặt
 
-打开 Claude Code 桌面版的终端，复制粘贴即可。
-Mở terminal trong Claude Code Desktop, copy-paste là xong.
+打开 Claude Code 桌面版，在对话框里说：
+Mở Claude Code Desktop, nói trong ô chat:
 
-### 查看有哪些 Skills / Xem có những Skills nào
-```bash
-curl -sL https://raw.githubusercontent.com/a2320661034-ops/nivex-skills/main/install.sh | bash -s -- --list
-```
+> **帮我安装 NIVEX Skills，地址是 https://github.com/a2320661034-ops/nivex-skills**
 
-### 安装全部 / Cài tất cả
-```bash
-curl -sL https://raw.githubusercontent.com/a2320661034-ops/nivex-skills/main/install.sh | bash
-```
+就这一句，Claude 会自动帮你装好。
+Chỉ cần một câu, Claude sẽ tự động cài cho bạn.
 
 ### 只装你需要的 / Chỉ cài cái bạn cần
-```bash
-# 例 / Ví dụ: 只装翻译和PPT
-curl -sL https://raw.githubusercontent.com/a2320661034-ops/nivex-skills/main/install.sh | bash -s -- 小玲翻译 NIVEX_PPT
-```
+
+> **帮我安装 NIVEX Skills 里的「小玲翻译」和「NIVEX_PPT」，地址是 https://github.com/a2320661034-ops/nivex-skills**
 
 ---
 
-## 📋 Skills 分类 / Phân loại theo vị trí
+## 📋 有哪些 Skills / Danh sách Skills
 
 ### 🎯 销售 & 客服 / Kinh doanh & CSKH
 
-| Skill | 触发词 / Từ kích hoạt | 说明 / Mô tả |
-|-------|----------------------|-------------|
-| `AK_投资顾问` | AK、投资顾问 | 客户咨询、异议处理、分类跟进 — Tư vấn KH, xử lý phản đối, phân loại & theo dõi |
+| Skill | 说一句就能用 / Nói một câu là dùng được | 干什么的 / Làm gì |
+|-------|---------------------------------------|-------------------|
+| AK_投资顾问 | "AK，客户问安全性怎么回答" | 客户话术、异议处理 — Tư vấn KH, xử lý phản đối |
 
-```bash
-curl -sL https://raw.githubusercontent.com/a2320661034-ops/nivex-skills/main/install.sh | bash -s -- AK_投资顾问
-```
+### 🌐 翻译 / Phiên dịch
 
----
-
-### 🌐 翻译 & 语言 / Phiên dịch & Ngôn ngữ
-
-| Skill | 触发词 / Từ kích hoạt | 说明 / Mô tả |
-|-------|----------------------|-------------|
-| `小玲翻译` | 小玲翻译、翻译一下 | 中越双语翻译 — Dịch Trung-Việt, chú trọng ngữ khí |
-| `芳草_翻译助理` | 芳草翻译 | 会议纪要、文档翻译 — Biên bản họp, dịch tài liệu |
-| `交易所语言QA` | 语言QA、翻译审查 | 多语言翻译质量审查 — Kiểm tra chất lượng dịch đa ngôn ngữ |
-
-```bash
-curl -sL https://raw.githubusercontent.com/a2320661034-ops/nivex-skills/main/install.sh | bash -s -- 小玲翻译 芳草_翻译助理 交易所语言QA
-```
-
----
+| Skill | 说一句就能用 / Nói một câu là dùng được | 干什么的 / Làm gì |
+|-------|---------------------------------------|-------------------|
+| 小玲翻译 | "小玲翻译，帮我翻译这段" | 中越双语翻译 — Dịch Trung-Việt |
+| 芳草_翻译助理 | "芳草，翻译这个会议纪要" | 文档翻译 — Dịch tài liệu |
+| 交易所语言QA | "语言QA，审查这个CSV" | 翻译质量审查 — Kiểm tra chất lượng dịch |
 
 ### 📊 市场 & 运营 / Marketing & Vận hành
 
-| Skill | 触发词 / Từ kích hoạt | 说明 / Mô tả |
-|-------|----------------------|-------------|
-| `市场速递` | 市场速递、日报 | 每日 BTC/ETH 行情分析 — Phân tích BTC/ETH hàng ngày |
-| `NIVEX_PPT` | 做PPT、生成PPT | HTML 演示文稿生成 — Tạo slide HTML |
-
-```bash
-curl -sL https://raw.githubusercontent.com/a2320661034-ops/nivex-skills/main/install.sh | bash -s -- 市场速递 NIVEX_PPT
-```
-
----
+| Skill | 说一句就能用 / Nói một câu là dùng được | 干什么的 / Làm gì |
+|-------|---------------------------------------|-------------------|
+| 市场速递 | "市场速递" | 每日行情分析 — Phân tích thị trường hàng ngày |
+| NIVEX_PPT | "做个PPT，主题是交易所介绍" | 生成演示文稿 — Tạo slide |
 
 ### 🏢 管理 / Quản lý
 
-| Skill | 触发词 / Từ kích hoạt | 说明 / Mô tả |
-|-------|----------------------|-------------|
-| `业务工作流` | 做工作流、流程拆解 | 目标倒推工作流 — Quy trình đảo ngược từ mục tiêu |
-| `员工Skill评分` | Skill评分 | 员工能力评估 — Đánh giá năng lực nhân viên |
-
-```bash
-curl -sL https://raw.githubusercontent.com/a2320661034-ops/nivex-skills/main/install.sh | bash -s -- 业务工作流 员工Skill评分
-```
-
----
-
-## 🔧 安装后怎么用 / Cài xong dùng thế nào
-
-打开 Claude Code，直接说触发词：
-Mở Claude Code, nói từ kích hoạt:
-
-```
-> 小玲翻译，帮我翻译一下这段话
-> 做个PPT，主题是交易所介绍
-> AK，这个客户问安全性怎么回答
-> 市场速递
-```
+| Skill | 说一句就能用 / Nói một câu là dùng được | 干什么的 / Làm gì |
+|-------|---------------------------------------|-------------------|
+| 业务工作流 | "做个工作流，目标是月新增500用户" | 目标倒推流程 — Quy trình từ mục tiêu |
+| 员工Skill评分 | "帮我做Skill评分" | 员工能力评估 — Đánh giá năng lực |
 
 ---
 
 ## 🔄 更新 / Cập nhật
 
-重新运行安装命令即可，自动覆盖旧版。
-Chạy lại lệnh cài đặt, tự động ghi đè phiên bản cũ.
+对 Claude Code 说：
+Nói với Claude Code:
 
----
-
-## 🤝 贡献新 Skill / Đóng góp Skill mới
-
-1. **Fork** 仓库 / Fork repo
-2. 在 `skills/` 下建文件夹，放入 `SKILL.md` / Tạo thư mục trong `skills/`, thêm `SKILL.md`
-3. 提 **Pull Request** / Gửi **Pull Request**
+> **帮我更新 NIVEX Skills**
 
 ---
 
 ## ❓ 常见问题 / FAQ
 
-**Q: 安装后没效果？/ Cài xong không thấy?**
-> 重启 Claude Code。/ Khởi động lại Claude Code.
+**装完没反应？/ Cài xong không thấy?**
+→ 关掉 Claude Code 重新打开。/ Tắt Claude Code mở lại.
 
-**Q: 怎么更新？/ Cập nhật thế nào?**
-> 重新跑安装命令。/ Chạy lại lệnh cài đặt.
-
-**Q: 不会用终端？/ Không biết dùng terminal?**
-> 在 Claude Code 里直接对话说"帮我安装 NIVEX Skills"，它会引导你。
-> Nói với Claude Code: "Giúp tôi cài NIVEX Skills", nó sẽ hướng dẫn bạn.
+**想加新 Skill？/ Muốn thêm Skill mới?**
+→ 联系管理员提交。/ Liên hệ admin để gửi.
